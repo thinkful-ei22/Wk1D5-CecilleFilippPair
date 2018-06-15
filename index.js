@@ -1,3 +1,10 @@
+const STORE = [
+  {name: "apples", checked: false},
+  {name: "oranges", checked: false},
+  {name: "milk", checked: true},
+  {name: "bread", checked: false}
+];
+
 function renderShoppingList() {
   // this function will be responsible for rendering the shopping list in
   // the DOM
@@ -29,5 +36,11 @@ function handleDeleteItemClicked() {
 // that handle new item submission and user clicks on the "check" and "delete" buttons
 // for individual shopping list items.
 function handleShoppingList() {
+  renderShoppingList();
+  handleNewItemSubmit();
+  handleItemCheckClicked();
+  handleDeleteItemClicked();
 
 }
+
+$(handleShoppingList());
